@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrar pacientes veterinaria</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header class="mt-5 p-3">
+            <h1>ADMINISTRACION TURNOS VETERINARIA</h1>
+        </header>
+
+        <div class="contenedor d-flex">
+
+            <div id="uno" class="col-md-6">
+                <form id="nueva-cita">
+                    <h3>DATOS CLIENTE</h3>
+
+                    <div class="my-3 row">
+                        <label class="col-sm-4 col-lg-4 col-form-label">Paciente:</label>
+                        <div class="col-sm-8 col-lg-8">
+                            <input id="mascota" name="mascota" type="text" class="form-control" placeholder="Nombre de la mascota">
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <label class="col-sm-4 col-form-label">Propietario:</label>
+                        <div class="col-sm-8">
+                            <input id="propietario" name="propietario" type="text" class="form-control" placeholder="Nombre del dueño">
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <label class="col-sm-4 col-form-label">Teléfono:</label>
+                        <div class="col-sm-8">
+                            <input id="telefono" name="telefono" type="text" class="form-control" placeholder="Número del propietario">
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <label class="col-sm-4 col-form-label">Fecha ingreso:</label>
+                        <div class="col-sm-8">
+                            <input id="fecha" name="fecha" type="date" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <label class="col-sm-4 col-form-label">Hora ingreso:</label>
+                        <div class="col-sm-8">
+                            <input id="hora" name="hora" type="time" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <label class="col-sm-4 col-form-label">Síntomas:</label>
+                        <div class="col-sm-8">
+                            <textarea id="sintomas" name="sintomas" class="form-control" placeholder="Estado de la mascota"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group d-flex justify-content-center mt-5">
+                        <input class="btn btn-success w-100" type="submit" value="REGISTRAR">
+                    </div>
+
+                </form>
+            </div>
+
+            <div class="col-md-6">
+                <div class="contenedorCitas">
+                    <h3 id="administra">AUN NO HAY REGISTROS</h3>
+                    <ul id="citas" class="list-group lista-citas p-3"> </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
